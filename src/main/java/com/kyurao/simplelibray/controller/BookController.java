@@ -1,7 +1,9 @@
 package com.kyurao.simplelibray.controller;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/book")
+@RestController
+@RequestMapping("/book")
 public class BookController {
 }
