@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -20,6 +21,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "id_card", unique = true)
+    private String idCard;
+
     private String firstName;
 
     private String lastName;
@@ -28,6 +32,6 @@ public class User {
 
     private ContactInfo contactInfo;
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
-    private Set<Book> takenBooks;
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
+    private Set<Book> takenBooks = new HashSet<>();
 }
