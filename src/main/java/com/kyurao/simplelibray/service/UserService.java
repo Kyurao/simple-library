@@ -30,7 +30,7 @@ public class UserService {
     }
 
     public void addNewUser(NewUserReq req) {
-        if (!userRepository.existByIdCard(req.getIdCard())) {
+        if (!userRepository.existsByIdCard(req.getIdCard())) {
             User user = new User();
             user.setContactInfo(new ContactInfo());
             user.setIdCard(req.getIdCard());
