@@ -21,7 +21,6 @@ public class BookService {
         Book book = new Book();
         updateBookFromRequestDto(req, book);
         book.setState(BookState.AVAILABLE);
-
         bookRepository.save(book);
     }
 
@@ -39,7 +38,6 @@ public class BookService {
     public void editBook(Long id, BookReq req) {
         Book book = findById(id);
         updateBookFromRequestDto(req, book);
-
         bookRepository.save(book);
     }
 
@@ -47,9 +45,13 @@ public class BookService {
         bookRepository.deleteById(id);
     }
 
-    private Book findById(Long id) {
+    Book findById(Long id) {
         return bookRepository.findById(id)
                 .orElseThrow(RuntimeException::new);
+    }
+
+    void save(Book book) {
+        bookRepository.save(book);
     }
 
     private List<Book> findAllBooks() {

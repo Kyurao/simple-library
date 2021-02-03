@@ -35,7 +35,6 @@ public class UserService {
             user.setContactInfo(new ContactInfo());
             user.setIdCard(req.getIdCard());
             updateUserFromRequestDto(req, user);
-
             userRepository.save(user);
         } else {
             throw new RuntimeException("User exist");
@@ -45,7 +44,6 @@ public class UserService {
     public void editUser(Long id, UserReq req) {
         User user = findById(id);
         updateUserFromRequestDto(req, user);
-
         userRepository.save(user);
     }
 
@@ -61,7 +59,7 @@ public class UserService {
         user.getContactInfo().setPhoneNumber(req.getPhoneNumber());
     }
 
-    private User findById(Long id) {
+    User findById(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(RuntimeException::new);
     }
