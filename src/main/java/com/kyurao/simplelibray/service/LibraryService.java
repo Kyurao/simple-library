@@ -2,8 +2,12 @@ package com.kyurao.simplelibray.service;
 
 import com.kyurao.simplelibray.domain.Book;
 import com.kyurao.simplelibray.domain.User;
+import com.kyurao.simplelibray.dto.response.UserWithBookRes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.kyurao.simplelibray.domain.enums.BookState.AVAILABLE;
 import static com.kyurao.simplelibray.domain.enums.BookState.TAKEN;
@@ -38,4 +42,25 @@ public class LibraryService {
         }
     }
 
+    public UserWithBookRes getUserBooksInfo(Long userId) {
+        User user = userService.findById(userId);
+
+        return getUserWithBookRes(user);
+    }
+
+    public List<UserWithBookRes> getAllUsersWithTheirBooks() {
+        return userService.findAllUsers()
+                .stream()
+                .map(this::getUserWithBookRes)
+                .collect(Collectors.toList());
+    }
+
+    private UserWithBookRes getUserWithBookRes(User user) {
+        UserWithBookRes res = new UserWithBookRes();
+        res.setUserId(user.getId());
+        res.setFirstName(user.getFirstName());
+        res.setLastName(user.getLastName());
+        res.setUserBooks(bookService.bookToDto(user.getTakenBooks()));
+        return res;
+    }
 }

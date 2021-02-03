@@ -64,7 +64,7 @@ public class UserService {
                 .orElseThrow(RuntimeException::new);
     }
 
-    private List<User> findAllUsers() {
+    List<User> findAllUsers() {
         return userRepository.findAll();
     }
 
