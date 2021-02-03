@@ -21,11 +21,6 @@ public class UserController {
         return userService.getUser(userId);
     }
 
-    @GetMapping //localhost:8800/user?id=1
-    public UserRes getUserByParam(@RequestParam Long id) {
-        return userService.getUser(id);
-    }
-
     @GetMapping("all")
     public List<UserRes> getAllUsers() {
         return userService.getAllUsers();
