@@ -1,4 +1,4 @@
-package com.kyurao.simplelibray.domain.enums;
+package com.kyurao.simplelibrary.domain.enums;
 
 import lombok.Getter;
 import lombok.Setter;

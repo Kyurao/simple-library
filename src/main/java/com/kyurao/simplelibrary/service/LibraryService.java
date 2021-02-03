@@ -1,16 +1,16 @@
-package com.kyurao.simplelibray.service;
+package com.kyurao.simplelibrary.service;
 
-import com.kyurao.simplelibray.domain.Book;
-import com.kyurao.simplelibray.domain.User;
-import com.kyurao.simplelibray.dto.response.UserWithBookRes;
+import com.kyurao.simplelibrary.domain.Book;
+import com.kyurao.simplelibrary.domain.User;
+import com.kyurao.simplelibrary.dto.response.UserWithBookRes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.kyurao.simplelibray.domain.enums.BookState.AVAILABLE;
-import static com.kyurao.simplelibray.domain.enums.BookState.TAKEN;
+import static com.kyurao.simplelibrary.domain.enums.BookState.AVAILABLE;
+import static com.kyurao.simplelibrary.domain.enums.BookState.TAKEN;
 
 @Service
 @RequiredArgsConstructor

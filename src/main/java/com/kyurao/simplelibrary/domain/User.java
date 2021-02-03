@@ -1,6 +1,6 @@
-package com.kyurao.simplelibray.domain;
+package com.kyurao.simplelibrary.domain;
 
-import com.kyurao.simplelibray.domain.enums.ContactInfo;
+import com.kyurao.simplelibrary.domain.enums.ContactInfo;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

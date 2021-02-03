@@ -1,4 +1,4 @@
-package com.kyurao.simplelibray.dto.response;
+package com.kyurao.simplelibrary.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;

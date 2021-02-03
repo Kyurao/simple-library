@@ -1,4 +1,4 @@
-package com.kyurao.simplelibray.dto.request;
+package com.kyurao.simplelibrary.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;

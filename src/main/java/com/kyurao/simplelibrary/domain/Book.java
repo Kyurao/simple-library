@@ -1,7 +1,7 @@
-package com.kyurao.simplelibray.domain;
+package com.kyurao.simplelibrary.domain;
 
 
-import com.kyurao.simplelibray.domain.enums.BookState;
+import com.kyurao.simplelibrary.domain.enums.BookState;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,11 +1,11 @@
-package com.kyurao.simplelibray.service;
+package com.kyurao.simplelibrary.service;
 
-import com.kyurao.simplelibray.domain.User;
-import com.kyurao.simplelibray.domain.enums.ContactInfo;
-import com.kyurao.simplelibray.dto.request.NewUserReq;
-import com.kyurao.simplelibray.dto.request.UserReq;
-import com.kyurao.simplelibray.dto.response.UserRes;
-import com.kyurao.simplelibray.repository.UserRepository;
+import com.kyurao.simplelibrary.domain.User;
+import com.kyurao.simplelibrary.domain.enums.ContactInfo;
+import com.kyurao.simplelibrary.dto.request.NewUserReq;
+import com.kyurao.simplelibrary.dto.request.UserReq;
+import com.kyurao.simplelibrary.dto.response.UserRes;
+import com.kyurao.simplelibrary.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

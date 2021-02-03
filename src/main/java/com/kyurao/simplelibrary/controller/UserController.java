@@ -1,9 +1,9 @@
-package com.kyurao.simplelibray.controller;
+package com.kyurao.simplelibrary.controller;
 
-import com.kyurao.simplelibray.dto.request.NewUserReq;
-import com.kyurao.simplelibray.dto.request.UserReq;
-import com.kyurao.simplelibray.dto.response.UserRes;
-import com.kyurao.simplelibray.service.UserService;
+import com.kyurao.simplelibrary.dto.request.NewUserReq;
+import com.kyurao.simplelibrary.dto.request.UserReq;
+import com.kyurao.simplelibrary.dto.response.UserRes;
+import com.kyurao.simplelibrary.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

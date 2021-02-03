@@ -1,8 +1,8 @@
-package com.kyurao.simplelibray.controller;
+package com.kyurao.simplelibrary.controller;
 
-import com.kyurao.simplelibray.dto.request.BookReq;
-import com.kyurao.simplelibray.dto.response.BookRes;
-import com.kyurao.simplelibray.service.BookService;
+import com.kyurao.simplelibrary.dto.request.BookReq;
+import com.kyurao.simplelibrary.dto.response.BookRes;
+import com.kyurao.simplelibrary.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

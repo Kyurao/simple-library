@@ -1,6 +1,6 @@
-package com.kyurao.simplelibray.repository;
+package com.kyurao.simplelibrary.repository;
 
-import com.kyurao.simplelibray.domain.Book;
+import com.kyurao.simplelibrary.domain.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookRepository extends JpaRepository<Book, Long> {

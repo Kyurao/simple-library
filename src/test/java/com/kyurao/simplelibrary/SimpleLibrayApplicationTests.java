@@ -1,4 +1,4 @@
-package com.kyurao.simplelibray;
+package com.kyurao.simplelibrary;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

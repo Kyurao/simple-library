@@ -1,4 +1,4 @@
-package com.kyurao.simplelibray.dto.request;
+package com.kyurao.simplelibrary.dto.request;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
