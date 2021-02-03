@@ -70,6 +70,7 @@ public class UserService {
 
     private UserRes userToDto(User user) {
         UserRes res = new UserRes();
+        res.setId(user.getId());
         res.setFirstName(user.getFirstName());
         res.setLastName(user.getLastName());
         res.setDateOfBirthday(user.getDateOfBirthday());

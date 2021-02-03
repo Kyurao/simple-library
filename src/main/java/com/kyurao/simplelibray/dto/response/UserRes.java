@@ -10,6 +10,8 @@ import java.time.LocalDate;
 @Setter
 public class UserRes {
 
+    private Long id;
+
     private String firstName;
 
     private String lastName;

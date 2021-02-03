@@ -66,6 +66,7 @@ public class BookService {
 
     private BookRes bookToDto(Book book) {
         BookRes res = new BookRes();
+        res.setId(book.getId());
         res.setName(book.getName());
         res.setAuthor(book.getAuthor());
         res.setPublicationYear(book.getPublicationYear());
