@@ -8,6 +8,7 @@ import com.kyurao.simplelibray.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -64,7 +65,7 @@ public class BookService {
         book.setPublicationYear(req.getPublicationYear());
     }
 
-    private BookRes bookToDto(Book book) {
+    BookRes bookToDto(Book book) {
         BookRes res = new BookRes();
         res.setId(book.getId());
         res.setName(book.getName());
@@ -72,5 +73,12 @@ public class BookService {
         res.setPublicationYear(book.getPublicationYear());
 
         return res;
+    }
+
+    List<BookRes> bookToDto(Collection<Book> books) {
+        return books
+                .stream()
+                .map(this::bookToDto)
+                .collect(Collectors.toList());
     }
 }
